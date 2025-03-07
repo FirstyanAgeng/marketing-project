@@ -22,26 +22,28 @@ const App = () => {
           <button className="bg-white text-red-800 px-4 py-2 rounded font-medium hover:bg-red-100 transition">Hubungi Kami</button>
         </nav>
         
-        <div className={`flex flex-col md:flex-row items-center max-w-6xl mx-auto transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="md:w-1/2 md:pr-8 text-center md:text-left mb-8 md:mb-0">
+        <div className={`flex flex-col items-center max-w-6xl mx-auto transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-6">
               Transformasi Perfilman Indonesia
             </h1>
             <p className="text-xl text-red-100 mb-8">
               Menghadirkan karya film berkualitas tinggi yang menginspirasi dan membanggakan
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button className="bg-white text-red-800 px-6 py-3 rounded-lg font-bold hover:bg-red-100 transition">Lihat Katalog Film</button>
-              <button className="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition">Tentang Kami</button>
-            </div>
           </div>
-          <div className="md:w-1/2">
+          
+          <div className="w-full max-w-3xl mx-auto">
             <div className="relative shadow-2xl rounded-lg overflow-hidden">
               <video className="w-full rounded-lg" controls poster="/path-to-poster-image.jpg">
                 <source src="/path-to-your-video.mp4" type="video/mp4" />
                 Browser Anda tidak mendukung tag video.
               </video>
             </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <button className="bg-white text-red-800 px-6 py-3 rounded-lg font-bold hover:bg-red-100 transition">Lihat Katalog Film</button>
+            <button className="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition">Tentang Kami</button>
           </div>
         </div>
       </header>
