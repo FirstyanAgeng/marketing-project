@@ -13,11 +13,36 @@ const App = () => {
   }, []);
 
   const projects = [
-    { id: 1, title: "Judul Film 1", description: "Deskripsi film 1." },
-    { id: 2, title: "Judul Film 2", description: "Deskripsi film 2." },
-    { id: 3, title: "Judul Film 3", description: "Deskripsi film 3." },
-    { id: 3, title: "Judul Film 3", description: "Deskripsi film 3." },
-    { id: 3, title: "Judul Film 3", description: "Deskripsi film 3." },
+    {
+      id: 1,
+      title: "Judul Film 1",
+      description: "Deskripsi film 1.",
+      picture: "pic-1.jpeg",
+    },
+    {
+      id: 2,
+      title: "Judul Film 2",
+      description: "Deskripsi film 2.",
+      picture: "pic-2.jpeg",
+    },
+    {
+      id: 3,
+      title: "Judul Film 3",
+      description: "Deskripsi film 3.",
+      picture: "pic-3.jpeg",
+    },
+    {
+      id: 3,
+      title: "Judul Film 3",
+      description: "Deskripsi film 3.",
+      picture: "pic-4.jpeg",
+    },
+    {
+      id: 3,
+      title: "Judul Film 3",
+      description: "Deskripsi film 3.",
+      picture: "pic-5.jpeg",
+    },
   ];
 
   return (
@@ -196,11 +221,14 @@ const App = () => {
             {projects.map((project) => (
               <SwiperSlide key={project.id}>
                 <div className="bg-white rounded-lg overflow-hidden shadow-lg">
-                  <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    {/* Placeholder for film poster */}
-                    <span className="text-gray-500">Poster {project.id}</span>
+                  <div className="h-60 bg-gray-300 flex items-center justify-center">
+                    <img
+                      src={`/${project.picture}`}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="p-6">
+                  <div className="p-5">
                     <h3 className="font-bold text-xl mb-2">{project.title}</h3>
                     <p className="text-gray-600 mb-4">{project.description}</p>
                     <button className="text-red-700 font-semibold hover:text-red-900">

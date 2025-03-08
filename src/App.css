@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white; /* Ubah warna tombol navigasi */
+}
+
+.swiper-pagination-bullet {
+  background: white; /* Ubah warna bullet pagination */
+}
+
+.swiper-pagination-bullet-active {
+  background: red; /* Ubah warna bullet aktif */
+}
